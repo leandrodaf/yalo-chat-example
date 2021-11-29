@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./
+    volumes:
+      - .:/src
+    command: npm run start
+    env_file: 
+      - .env
+    ports:
+      - "3001:3001"
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"

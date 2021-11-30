@@ -5,7 +5,6 @@ const {
 } = require('../../config')
 
 async function byPass(data) {
-  console.log('>>>', url, !url)
   if (!url) {
     throw new Error('There is no URL setting for the redirect')
   }

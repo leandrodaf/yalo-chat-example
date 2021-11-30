@@ -29,5 +29,5 @@ app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 app.use(Handler)
 
 app.listen(config.port, () => {
-  console.log(`Example app listening at http://localhost:${config.port}`)
+  Logger.Log.info(`Example app listening at http://localhost:${config.port}`)
 })

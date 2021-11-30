@@ -34,3 +34,6 @@ Copy the **.env.example** file to **.env** and replace the values as per your ne
 - Use `make stop` for stope aplication or `docker-compose stop`
 
 The application will start on port **3001**, if you allow the port on the firewall
+
+## HTTP Docs
+- `/api/v1/docs`

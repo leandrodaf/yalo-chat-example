@@ -1,9 +1,6 @@
+const DatabaseMiddleware = require('./DatabaseMiddleware')
+
 const Redis = require('./Redis')
+const Mysql = require('./Mysql')
 
-module.exports = async (req, res, next) => {
-  req.database = {
-    redis: await Redis(),
-  }
-
-  return next()
-}
+module.exports = { DatabaseMiddleware, Redis, Mysql }

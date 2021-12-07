@@ -5,7 +5,7 @@ const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('../swagger.json')
 
 const Logger = require('./Logger')
-const database = require('./Database')
+const { DatabaseMiddleware } = require('./Database')
 const config = require('../config')
 const Router = require('./Router')
 const Handler = require('./Handler')
@@ -16,7 +16,7 @@ const optionsSwagger = {
 
 const app = express()
 
-app.use(database)
+app.use(DatabaseMiddleware)
 
 app.use(Logger.pinoHttp)
 app.use(cors())
